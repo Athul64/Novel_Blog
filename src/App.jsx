@@ -7,6 +7,7 @@ import BookDetail from "./components/BookDetails";
 import AddBookForm from "./pages/AddBookForm"; // Adjust the path based on your directory structure
 import FloatingActionButton from "./components/FloatingActionButton"; // Import FAB
 import data from "./data/data.json"
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
                 <BookCarousel />
                 <BookList books={data}/> {/* Displaying book list on the homepage */}
                 <FloatingActionButton /> {/* FAB included on home page */}
+                <Footer/>
               </>
             }
           />
