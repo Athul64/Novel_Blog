@@ -25,21 +25,23 @@ const BookDetails = () => {
   if (!book) {
     return <div>Book not found.</div>;
   }
-
   return (
     <div className="bookdetail_container">
       <div className="book-details">
-        <h2>{book.title}</h2>
-        <h3>{book.genre}</h3>
         <img 
           src={book.coverUrl} 
           alt={book.title} 
           onError={(e) => (e.target.src = "default-image-path.jpg")} 
         />
-        <p>{book.description}</p>
+        <div className="book-content">
+          <h2>{book.title}</h2>
+          <h3>{book.genre}</h3>
+          <p>{book.description}</p>
+        </div>
       </div>
     </div>
   );
+  
 };
 
 export default BookDetails;
